@@ -853,10 +853,91 @@ footer {
   to { opacity: 1; }
 }
 
-/* ── RESPONSIVE ── */
+/* ── NAV HAMBURGER ── */
+.nav-links { display: flex; gap: 24px; align-items: center; }
+
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  gap: 5px;
+  flex-shrink: 0;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--ink);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* ── MOBILE DRAWER ── */
+.nav-drawer {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px 40px;
+}
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+.drawer-header .nav-hamburger span { background: var(--ink); }
+.drawer-links {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  gap: 8px;
+}
+.drawer-links a {
+  font-family: var(--font-fraunces), serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.2s;
+}
+.drawer-links a:hover { color: var(--gold); }
+.drawer-cta {
+  display: block;
+  background: var(--ink);
+  color: var(--cream);
+  text-align: center;
+  padding: 18px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background 0.2s;
+  margin-top: 24px;
+}
+.drawer-cta:hover { background: var(--gold); }
+
+/* ── RESPONSIVE: 960px ── */
 @media (max-width: 960px) {
   nav { padding: 16px 20px; }
-  .nav-right { gap: 14px; }
   .site-link span { display: none; }
   .hero {
     grid-template-columns: 1fr;
@@ -885,4 +966,121 @@ footer {
   .marquee-item { font-size: 22px; }
   .form-wrap { padding: 28px; }
   .section-title { margin-bottom: 40px; }
+}
+
+/* ── RESPONSIVE: 768px — Tablet + büyük telefon ── */
+@media (max-width: 768px) {
+  /* Nav */
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+
+  /* Hero */
+  .hero { padding: 90px 20px 48px; }
+  .hero h1 { font-size: clamp(32px, 7vw, 48px); }
+  .hero-stats { gap: 24px; }
+  .hero-visual { max-width: 320px; }
+  .phone-mockup { width: 72%; }
+  .floating-tag { display: none; }
+
+  /* Sections */
+  .problems, .process { padding: 64px 20px; }
+  .solution { padding: 64px 20px; }
+  .offer { padding: 0 20px 64px; }
+  .faq { padding: 0 20px 64px; }
+  .section-title { font-size: clamp(28px, 6vw, 44px) !important; }
+
+  /* Marquee */
+  .marquee { gap: 40px; }
+  .marquee-item { font-size: 20px; }
+  .marquee-item::before { margin-right: 40px; }
+
+  /* Cards */
+  .problem-number { font-size: 40px; }
+  .step-num { width: 52px; height: 52px; font-size: 22px; }
+
+  /* FAQ */
+  .faq-answer { padding-right: 0; }
+  .faq-question { font-size: 18px; }
+
+  /* Touch targets */
+  .nav-cta, .btn-primary, .form-submit, .drawer-cta {
+    min-height: 44px;
+  }
+  .nav-cta { padding: 10px 18px; font-size: 13px; }
+}
+
+/* ── RESPONSIVE: 480px — Standart telefon ── */
+@media (max-width: 480px) {
+  /* Hero */
+  .hero { padding: 80px 16px 40px; gap: 32px; }
+  .hero h1 { font-size: clamp(28px, 8vw, 38px); }
+  .hero-stats {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  .hero-visual { max-width: 260px; }
+  .phone-mockup { width: 78%; }
+  .hero p.lead { font-size: 16px; }
+  .hero-ctas { flex-direction: column; width: 100%; }
+  .btn-primary { width: 100%; justify-content: center; padding: 16px 24px; }
+  .btn-ghost { justify-content: center; }
+
+  /* Sections */
+  .problems, .process { padding: 48px 16px; }
+  .solution { padding: 48px 16px; }
+  .offer { padding: 0 16px 48px; }
+  .faq { padding: 0 16px 48px; }
+  .marquee-section { padding: 28px 0; }
+  .section-label { font-size: 11px; }
+
+  /* Cards */
+  .problem-card { padding: 24px 20px; }
+  .problem-number { font-size: 36px; }
+  .problem-card h3 { font-size: 20px; }
+  .solution-item { padding: 28px 20px; }
+  .solution-item h3 { font-size: 22px; }
+
+  /* Process */
+  .step-num { width: 48px; height: 48px; font-size: 20px; }
+  .step h3 { font-size: 20px; }
+
+  /* Offer / Form */
+  .offer-card { padding: 36px 16px; gap: 32px; }
+  .offer-card h2 { font-size: 28px; }
+  .offer-card .lead { font-size: 15px; }
+  .offer-ribbon { font-size: 10px; }
+  .form-wrap { padding: 24px 16px; }
+  .form-label { font-size: 11px; }
+  .form-title { font-size: 20px; }
+  .form-note { font-size: 11px; }
+
+  /* FAQ */
+  .faq-question { font-size: 16px; }
+
+  /* Marquee */
+  .marquee { gap: 32px; }
+  .marquee-item { font-size: 18px; }
+  .marquee-item::before { margin-right: 32px; }
+  .marquee-label { font-size: 10px; padding: 0 16px; }
+
+  /* Footer */
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  .footer-links { gap: 16px; flex-wrap: wrap; justify-content: center; }
+}
+
+/* ── RESPONSIVE: 375px — iPhone SE ── */
+@media (max-width: 375px) {
+  .hero h1 { font-size: 28px; }
+  .stat-num { font-size: 34px; }
+  .btn-primary { font-size: 14px; padding: 14px 20px; }
+  .offer-card { padding: 28px 14px; }
+  .form-input, .form-select { padding: 12px 14px; font-size: 14px; }
+  .form-submit { padding: 16px; font-size: 14px; }
+  nav { padding: 14px 16px; }
+  .logo { font-size: 18px; }
 }
