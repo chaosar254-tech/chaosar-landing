@@ -9,6 +9,7 @@ import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import ScrollDepth from "@/components/ScrollDepth";
 import StickyCTA from "@/components/StickyCTA";
+import ModelsCTA from "@/components/ModelsCTA";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <Problems />
         <Solution />
         <Process />
+        <ModelsCTA />
         <Offer />
         <FAQ />
       </main>

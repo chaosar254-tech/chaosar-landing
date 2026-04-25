@@ -501,6 +501,72 @@ model-viewer {
 }
 .solution-item p { color: rgba(245, 241, 234, 0.7); font-size: 15px; line-height: 1.7; }
 
+/* ── MODELS CTA ── */
+.models-cta {
+  position: relative;
+  z-index: 2;
+  padding: 0 40px 120px;
+}
+.models-cta-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--bg-dark);
+  border-radius: 32px;
+  padding: 80px 64px;
+  position: relative;
+  overflow: hidden;
+}
+.models-cta-inner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(184, 149, 106, 0.15) 0%, transparent 65%);
+  pointer-events: none;
+}
+.models-cta-inner .section-label {
+  color: var(--gold);
+  border-color: rgba(184, 149, 106, 0.3);
+  background: rgba(184, 149, 106, 0.1);
+}
+.models-cta-inner .section-title {
+  color: var(--cream);
+  margin-bottom: 20px;
+}
+.models-cta-inner .section-title em { color: var(--gold-light); }
+.models-cta-desc {
+  font-size: 17px;
+  color: rgba(245, 241, 234, 0.65);
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.models-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gold);
+  color: var(--bg-dark);
+  padding: 18px 36px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 1;
+}
+.models-cta-btn:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(184, 149, 106, 0.35);
+}
+.models-cta-btn svg { transition: transform 0.3s; }
+.models-cta-btn:hover svg { transform: translate(2px, -2px); }
+
 /* ── PROCESS ── */
 .process {
   padding: 140px 40px;
@@ -1063,6 +1129,8 @@ footer {
   /* Sections */
   .problems, .process { padding: 64px 20px; }
   .solution { padding: 64px 20px; }
+  .models-cta { padding: 0 20px 64px; }
+  .models-cta-inner { padding: 56px 32px; border-radius: 24px; }
   .offer { padding: 0 20px 64px; }
   .faq { padding: 0 20px 64px; }
   .section-title { font-size: clamp(28px, 6vw, 44px) !important; }
@@ -1106,6 +1174,10 @@ footer {
   /* Sections */
   .problems, .process { padding: 48px 16px; }
   .solution { padding: 48px 16px; }
+  .models-cta { padding: 0 16px 48px; }
+  .models-cta-inner { padding: 44px 24px; border-radius: 20px; }
+  .models-cta-desc { font-size: 15px; }
+  .models-cta-btn { width: 100%; justify-content: center; padding: 16px 24px; }
   .offer { padding: 0 16px 48px; }
   .faq { padding: 0 16px 48px; }
   .marquee-section { padding: 28px 0; }
