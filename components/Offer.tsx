@@ -199,6 +199,7 @@ export default function Offer() {
                   value={form.email}
                   onChange={(e) => set("email", e.target.value)}
                   autoComplete="email"
+                  inputMode="email"
                 />
                 {errors.email && (
                   <p className="form-error" role="alert">{errors.email}</p>
@@ -232,6 +233,8 @@ export default function Offer() {
                   value={form.phone}
                   onChange={(e) => set("phone", e.target.value)}
                   autoComplete="tel"
+                  inputMode="tel"
+                  pattern="[0-9\s\+\-\(\)]*"
                 />
                 {errors.phone && (
                   <p className="form-error" role="alert">{errors.phone}</p>
