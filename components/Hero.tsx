@@ -1,3 +1,5 @@
+import PhoneModel from "./PhoneModel";
+
 export default function Hero() {
   return (
     <section className="hero">
@@ -85,7 +87,7 @@ export default function Hero() {
         <div className="phone-mockup">
           <div className="phone-screen">
             <div className="ar-label">AR GÖRÜNÜM</div>
-            <div className="phone-product" />
+            <PhoneModel />
           </div>
         </div>
       </div>

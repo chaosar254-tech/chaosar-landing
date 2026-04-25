@@ -266,6 +266,10 @@ nav {
   align-items: center;
   justify-content: center;
 }
+model-viewer {
+  --poster-color: transparent;
+  border-radius: 32px;
+}
 .phone-product {
   width: 62%; height: 62%;
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
