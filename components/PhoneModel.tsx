@@ -19,7 +19,7 @@ export default function PhoneModel() {
 
   return (
     <MV
-      src="/Canta.glb"
+      src="https://models.chaosarmenu.com/chaosar-shop/Canta.glb"
       auto-rotate=""
       auto-rotate-delay="800"
       rotation-per-second="20deg"
