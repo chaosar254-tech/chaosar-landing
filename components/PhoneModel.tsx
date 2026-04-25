@@ -19,7 +19,7 @@ export default function PhoneModel() {
 
   return (
     <MV
-      src="/demo-model.glb"
+      src="/Canta.glb"
       auto-rotate=""
       auto-rotate-delay="800"
       rotation-per-second="20deg"
