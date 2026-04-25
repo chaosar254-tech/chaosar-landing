@@ -16,6 +16,7 @@ export default function Footer() {
           </a>
           <a href="#demo-form">Demo</a>
           <a href="mailto:info@cha0sar.com">info@cha0sar.com</a>
+          <a href="/gizlilik">Gizlilik Politikası</a>
         </div>
       </div>
     </footer>
