@@ -1195,7 +1195,6 @@ footer {
     gap: 40px;
     padding: 48px 28px;
   }
-  .form-wrap { order: -1; }
   .problems, .process { padding: 80px 20px; }
   .solution { padding: 80px 20px; }
   .offer { padding: 0 20px 80px; }
