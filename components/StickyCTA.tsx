@@ -25,7 +25,7 @@ export default function StickyCTA() {
       aria-hidden={!show}
     >
       <a href="#demo-form" className="sticky-cta-btn">
-        Ücretsiz Demo İste →
+        Başvuru Yap →
       </a>
     </div>
   );

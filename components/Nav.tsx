@@ -67,7 +67,7 @@ export default function Nav() {
           </div>
 
           <a href="#demo-form" className="drawer-cta" onClick={close}>
-            Ücretsiz Demo İste →
+            Başvuru Yap →
           </a>
         </div>
       )}

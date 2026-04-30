@@ -41,7 +41,7 @@ export default function Hero() {
 
         <div className="hero-ctas">
           <a href="#demo-form" className="btn-primary">
-            Ücretsiz Demo İste
+            Başvuru Yap
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path
                 d="M3 8H13M13 8L8 3M13 8L8 13"
